@@ -1,0 +1,884 @@
+
+  <!DOCTYPE HTML>
+  <html lang="en">
+  <head>
+  <title>IdleRPG Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+  <style>
+  html {
+      height: 100%;
+  }
+  body {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-family: 'Overlock';
+      height: 100%;
+      /* background: linear-gradient(to bottom right, #e2dd36 0%, #f78f20 100%);*/
+      background: url("IdleRPG2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+  }
+  table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
+  table {
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  td, th {
+      padding: 7px;
+  }
+  th {
+      color: white;
+      background-color: black;
+  }
+  span {
+      color: red;
+      background-color: white;
+      border-radius: 5px;
+  }
+  </style>
+  </head>
+  <body>
+  <div style="width:100%;text-align:center;margin-bottom:10px;">
+  <a href="https://discordbots.org/bot/424606447867789312" > <img src="https://discordbots.org/api/widget/424606447867789312.svg" alt="IdleRPG Bot" style="vertical-align:middle;" /></a><br><br>
+  Prefix<br>
+  <span>$ (customizable) or mention me!</span>
+  </div>
+  <h1>Gamblin</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>flip [side=heads] [amount=0]</td>
+  <td>Flip a coin to win some money!</td>
+  <td>coin</td>
+  </tr>
+
+  
+  <tr>
+  <td>draw </td>
+  <td>Draw a card!</td>
+  <td>card</td>
+  </tr>
+
+  
+  <tr>
+  <td>bet [maximum=6] [tip=6] [money=0]</td>
+  <td>Roll the dice and win some money!</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Adventure</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>cancel </td>
+  <td>Cancels your current mission.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>adventures </td>
+  <td>Shows a list of all dungeons with your success rate.</td>
+  <td>missions, dungeons</td>
+  </tr>
+
+  
+  <tr>
+  <td>adventure <dungeonnumber></td>
+  <td>Sends your character on an adventure.</td>
+  <td>mission, a, dungeon</td>
+  </tr>
+
+  
+  <tr>
+  <td>status </td>
+  <td>Checks your character's adventure status.</td>
+  <td>s</td>
+  </tr>
+
+  </table>
+<h1>Ranks</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>richest </td>
+  <td>Shows the richest players. Maximum 10.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>pvpstats </td>
+  <td>Shows the best players sorted by XP. Maximum 10.</td>
+  <td>pvp, battles</td>
+  </tr>
+
+  
+  <tr>
+  <td>highscore </td>
+  <td>Shows the best players sorted by XP. Maximum 10.</td>
+  <td>best, high, top</td>
+  </tr>
+
+  </table>
+<h1>Tradin</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>shop [itemtype=All] [minstat=0.0] [highestprice=10000]</td>
+  <td>Show the market with all items and prices.</td>
+  <td>market, m</td>
+  </tr>
+
+  
+  <tr>
+  <td>offer <itemid> <price> [user]</td>
+  <td>Offer an item to a specific user.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>sell <itemid> <price></td>
+  <td>Sells the item with the given ID for the given price.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>buy <itemid></td>
+  <td>Buys an item with the given ID.</td>
+  <td>b</td>
+  </tr>
+
+  
+  <tr>
+  <td>merchant <itemid></td>
+  <td>Sells an item for its value.</td>
+  <td>merch</td>
+  </tr>
+
+  
+  <tr>
+  <td>pending </td>
+  <td>Views your pending shop items.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>remove <itemid></td>
+  <td>Takes an item off the shop.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Profile</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>delete </td>
+  <td>Deletes your character.</td>
+  <td>rm, del</td>
+  </tr>
+
+  
+  <tr>
+  <td>profile2 [person]</td>
+  <td>Shows your profile.</td>
+  <td>p2</td>
+  </tr>
+
+  
+  <tr>
+  <td>economy </td>
+  <td>Shows your current balance.</td>
+  <td>money, e</td>
+  </tr>
+
+  
+  <tr>
+  <td>inventory </td>
+  <td>Shows your current inventory.</td>
+  <td>inv, i</td>
+  </tr>
+
+  
+  <tr>
+  <td>colour <colour></td>
+  <td>Set your default text colour for the profile command.</td>
+  <td>color</td>
+  </tr>
+
+  
+  <tr>
+  <td>create </td>
+  <td>Creates a new character.</td>
+  <td>new, c, start</td>
+  </tr>
+
+  
+  <tr>
+  <td>rename </td>
+  <td>Changes your character name</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>profile [person]</td>
+  <td>Shows your character with all information.</td>
+  <td>me, p</td>
+  </tr>
+
+  
+  <tr>
+  <td>upgradeweapon <itemid></td>
+  <td>Upgrades an item's stat by 1.</td>
+  <td>upgrade</td>
+  </tr>
+
+  
+  <tr>
+  <td>xp </td>
+  <td>Shows your current XP count.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>equip <itemid></td>
+  <td>Equips the item with the given ID.</td>
+  <td>use</td>
+  </tr>
+
+  
+  <tr>
+  <td>give <money> [other]</td>
+  <td>Gift money!</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Battles</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>battle <money> [enemy]</td>
+  <td>Battle yourself for the money you choose.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Help</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>tutorial </td>
+  <td>Tutorial link.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>help [command]</td>
+  <td>Get some help.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>faq </td>
+  <td>Link to the FAQ.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>documentation </td>
+  <td>Sends a link to the official documentation.</td>
+  <td>docs</td>
+  </tr>
+
+  </table>
+<h1>Vote</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>claim </td>
+  <td>Receive a crate if you voted the bot up.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>vote </td>
+  <td>Sends a vote link.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Crates</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>crates </td>
+  <td>None set.</td>
+  <td>boxes</td>
+  </tr>
+
+  
+  <tr>
+  <td>open </td>
+  <td>Open a crate!</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>tradecrate <other></td>
+  <td>Trades a crate to a user.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Patreon</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>makebackground <url> <overlaytype></td>
+  <td>[Patreon Only] Generates a background image.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>weaponname <itemid> <newname></td>
+  <td>[Patreon Only] Changes a weapon name.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>background [url]</td>
+  <td>[Patreon Only] Changes your profile background.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Store</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>store </td>
+  <td>The store. Buy boosters here.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>activate <boostertype></td>
+  <td>Uses a booster.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>purchase <item></td>
+  <td>Buy an item from the store.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>boosters </td>
+  <td>View your boosters.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Music</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>now_playing </td>
+  <td>Shows the music controller with information about the current song.</td>
+  <td>np, current, currentsong, playing</td>
+  </tr>
+
+  
+  <tr>
+  <td>queue </td>
+  <td>View the upcoming songs.</td>
+  <td>q, playlist</td>
+  </tr>
+
+  
+  <tr>
+  <td>pause </td>
+  <td>Pauses the currently playing song.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>volume <vol></td>
+  <td>Change the music volume.</td>
+  <td>vol</td>
+  </tr>
+
+  
+  <tr>
+  <td>resume </td>
+  <td>Resume the currently paused song.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>stop </td>
+  <td>Stops the song and the whole music session.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>skip </td>
+  <td>Skip the currently playing song.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>play <search></td>
+  <td>Plays a song from YouTube, SoundCloud, etc.</td>
+  <td>sing</td>
+  </tr>
+
+  
+  <tr>
+  <td>connect </td>
+  <td>Summon the bot to your voice channel.</td>
+  <td>join</td>
+  </tr>
+
+  </table>
+<h1>Marriage</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>propose <partner></td>
+  <td>Propose for a marriage!</td>
+  <td>marry</td>
+  </tr>
+
+  
+  <tr>
+  <td>relationship </td>
+  <td>View your marriage status.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>divorce </td>
+  <td>Divorce from your partner.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Guild</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>guild </td>
+  <td>None set.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Classes</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>tree </td>
+  <td>Evolving tree.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>class <profession></td>
+  <td>Change your class.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>steal </td>
+  <td>[Thief Only] Steal money!</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>myclass </td>
+  <td>Views your current class and benefits.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>evolve </td>
+  <td>Evolve to the next level of your class.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+<h1>Server</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>settings [setting=None] [value=None]</td>
+  <td>Change the settings.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>serverinfo </td>
+  <td>Prints out some information about this server.</td>
+  <td>server</td>
+  </tr>
+
+  
+  <tr>
+  <td>avatar <target></td>
+  <td>Steal Avatars.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>prefix </td>
+  <td>See your prefix.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>discrim <discrim></td>
+  <td>Who uses your discriminator?</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>userinfo [member]</td>
+  <td>Information about a user.</td>
+  <td>user, member, memberinfo</td>
+  </tr>
+
+  </table>
+<h1>Miscellaneous</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>meme </td>
+  <td>Memes :)</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>dice <type></td>
+  <td>Roleplay dice. Uses ndx format.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>changelog </td>
+  <td>Latest updates.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>choose [results...]</td>
+  <td>A usual guess...</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>cat </td>
+  <td>Cats!</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>daily </td>
+  <td>Get $50 per day.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>love <first> <second></td>
+  <td>A usual love test...</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>patreon </td>
+  <td>Support us!</td>
+  <td>donate</td>
+  </tr>
+
+  
+  <tr>
+  <td>ping </td>
+  <td>Bot's ping.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>credits </td>
+  <td>Credits!</td>
+  <td>invite</td>
+  </tr>
+
+  
+  <tr>
+  <td>randomname </td>
+  <td>What am I called where?</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>roll <maximum></td>
+  <td>Rolls a random number. The only argument defines the maximum result</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>stats </td>
+  <td>Some statistics.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>8ball <question></td>
+  <td>A usual 8ball...</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>dog </td>
+  <td>Dogs!</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>down </td>
+  <td>Is the bot down?</td>
+  <td>downtime</td>
+  </tr>
+
+  
+  <tr>
+  <td>fancy <text></td>
+  <td>Fancy Text</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>clear <num> [target]</td>
+  <td>Clears X messages.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>support </td>
+  <td>Get some help!</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>echo <shout></td>
+  <td>Echo! Echo....</td>
+  <td>say</td>
+  </tr>
+
+  </table>
+<h1>Tournament</h1>
+<table>
+
+  <tr>
+  <th>Command</th>
+  <th>Description</th>
+  <th>Aliases</th>
+  </tr>
+
+  
+  <tr>
+  <td>signup </td>
+  <td>Take part in a support server battle.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>tournament <prize></td>
+  <td>Start a new tournament with unlimited participants.</td>
+  <td>None</td>
+  </tr>
+
+  
+  <tr>
+  <td>newbattle </td>
+  <td>[Battle Owner Only] Reset battle participants.</td>
+  <td>None</td>
+  </tr>
+
+  </table>
+</body>
+</html>

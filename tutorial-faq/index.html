@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>IdleRPG Bot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+<style>
+html {
+    height: 100%;
+}
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Overlock';
+    height: 100%;
+    /* background: linear-gradient(to bottom right, #e2dd36 0%, #f78f20 100%);*/
+    background: url("../IdleRPG2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+td, th {
+    padding: 7px;
+}
+th {
+    color: white;
+    background-color: black;
+}
+span {
+    color: white;
+    background-color: #575859;
+     border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<div style="width:100%;text-align:center;margin-bottom:10px;">
+<a href="https://discordbots.org/bot/424606447867789312" > <img src="https://discordbots.org/api/widget/424606447867789312.svg" alt="IdleRPG Bot" style="vertical-align:middle;" /></a><br><br>
+</div>
+<h1>Tutorial</h1>
+Hello and welcome to the guidebook for IdleRPG Bot. This bot is mainly focused around an adventure-styled game. 
+To get started, you will first need to make a character. Type <span>$create</span> to do so.<br>
+After that, it will ask you to pick a name. Type a name. You do not need to include the prefix; if you do, it will be part of your name. For example:<br>
+<span>$create</span><br>
+<span>$Zell</span><br>
+The above will name my character <span>$Zell</span> so you do not need to include the prefix.<br>
+If you mess up the naming of your character, you can do <span>$rename</span> for no cost.<br><br>
+
+After that, you will start with $100 and some starter equipment (3 Atk/Def), so you will be pretty limited on what you can do.<br>
+Type <span>$adventures</span> to list all the adventures, and you will probably want to start with the first one, so type <span>$adventure 1</span> (Or <span>$a 1</span> to shorten it), and your character will embark on the adventure.<br>
+You can type <span>$status</span> (Or <span>$s</span>) to check on the status; you will need this command to complete the adventure when finished.<br>
+Every adventure takes time, the harder the difficulty, the more time it takes. The first one takes 30 minutes. Once the adventure is finished, the bot will calculate your success chances and you will either succeed on the mission or fail. If you succeed, you will receive money, experience, and a random piece of equipment. If you fail, you get nothing. Just embark on another adventure!<br><br>
+
+There are many ways to make money, you earn some from the adventures, you can sell your unwanted equipment (type <span>$inventory</span> or <span>$i</span> to see your inventory, this lists all items, their IDs, stats, and market value), if you want to put an item for sale to other players, type <span>$sell id price</span> and the item will be placed on the market. If you want to sell the item instantly for its value, type <span>$merch id</span> and you will receive the value.<br>
+You can also gamble! You can flip a coin to win (or lose) money. The command is <span>$flip heads/tails amount</span>, and at the moment there is no limit on how much you can bet. The chances are 50/50 and if you win, you receive the amount you bet, if you lose, you lose it.<br>
+There is also a <span>$bet</span> command where the bot will guess a number between <span>1</span> and the maximum you define (has to be at least 2), and if you guessed that number, you win the amount you bet.
+<br>For example:<br>
+<span>$bet 2 1 500</span> - Starts a bet. The bot will guess a number between 1 and 2, and if it is 1, you win $500.<br><br>
+
+You can also battle people for money. The command is <span>$battle amount</span>. If you want to battle a specific player, you can mention a user after the amount to battle for. The battle is handled by adding each combatant’s Atk, Def, and then adding a random number between 1-7 to each combatant, and whoever is higher, wins. If both are equal, it randomizes the winner. The winner receives the prize money. 
+
+<h1>FAQ</h1>
+Q: How do I make a character?<br>
+A: Type <span>$create</span> to start the creation process.<br><br>
+
+Q: Help! My character’s name is messed up. What do I do?<br>
+A: Type <span>$rename</span> to assign a different name to your character.<br><br>
+
+Q: How do I play the game?<br>
+A: Type <span>$adventures</span> to see a list of adventures; type <span>$adventure #</span> to embark on one.<br><br>
+
+Q: How do I see my stats and inventory?<br>
+A: You can type <span>$profile</span> (or <span>$p</span> for short) to show your profile, and <span>$inventory</span> (or <span>$i</span> for short) to see your inventory. You can also type <span>$profile @user</span> to show a user’s profile. If the image isn’t loading for you, you can type <span>$p2</span> to show your profile, or <span>$p2 @user</span> to show someone else’s profile.<br><br>
+
+Q: Is there a way to customize the profile images?<br>
+A: Yes, you can do <span>$profile white</span> to display the text in white or <span>$profile #RRGGBB</span> to display the text in a given hex color code. Works for other users profiles too.<br><br>
+
+Q: How do I equip the gear I find on adventures?<br>
+A: Type <span>$inventory</span> to display them, and type <span>$equip id</span> to equip them.<br><br>
+
+Q: Is there a way to get free money?<br>
+A: You can do <span>$daily</span> to receive $50 per day. Money is also earned through adventures, gambling, selling equipment, or becoming a patron.<br><br>
+
+Q: How do I battle my friend?<br>
+A: Type <span>$battle amount @friend</span>, and your friend types <span>private join @you</span>, no bot prefix.<br><br>
+
+Q: How do I get my crate for upvoting the bot?<br>
+A: Type <span>$claim</span>.<br><br>
+
+Q: $claim is telling me to wait a lot of seconds, but I didn’t receive my crate, what do I do?<br>
+A: Join the IdleRPG Support Server, and drop a message in the <span>#gimme-my-crate</span> channel. In the future, use <span>$vote</span> to generate the link to upvote the bot. To join the support server, type <span>$support</span>. <br><br>
+
+Q: How do I see the leaderboards?<br>
+A: Type <span>$richest</span> for top 10 richest players, <span>$highscore</span> for top 10 leveled players, and <span>$pvp</span> for top 10 PvPers.<br><br>
+
+Q: How do I use the market?<br>
+A: You type <span>$shop</span> to open the shop, and the bot will add reactions at the bottom to navigate the market. Click on one to navigate it. You can click on the <span>1234</span> reaction to go to a specific page (based on your input). You then type <span>$buy id</span> to buy an item.<br><br>
+
+Q: Can I trade items without the shop?<br>
+A: You can type <span>$offer id price @user</span> to offer an item at a certain price to a player.<br><br>
+
+Q: WTF are Item IDs?<br>
+A: The item is referenced by an ID since names are randomly generated and it is highly likely you will end up with two items of the same name. This is how they are referenced when handling them through trades or marketing.<br><br>
+
+Q: I have a question that’s not listed here, what should I do?<br>
+A: Join the IdleRPG Support Server by typing <span>$support</span> and leave a message in <span>#help</span> and someone will be there to answer your question. <br><br>
+
+<br><br>
+</body>
